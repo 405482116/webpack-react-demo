@@ -1,0 +1,10 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react",
+    ], //从左向右解析
+    "plugins": [
+        // "@babel/plugin-transform-runtime"
+        "react-hot-loader/babel"
+    ]
+}

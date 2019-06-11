@@ -1,4 +1,9 @@
-#root {
-    margin: 20px;
-    background: red;
- }
+ul {
+    list-style: none;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, hashHistory } from 'react-router'
+// import { Provider } from 'react-redux';
+// import { createStore } from 'redux';
+// import rootReducer from './reducers';
+// import { App } from './components/App';
+import BasicRoute from './Router';
+
+// const store = createStore(rootReducer)
+
 import './styles/main.scss';
-import { AppContainer } from 'react-hot-loader';
-import App from './App';
 ReactDOM.render(
-    <AppContainer>
-        <App />
-    </AppContainer>,
+    <BasicRoute />,
     document.getElementById('root')
 );
-
-// if (module.hot) {
-//     //实现热更新
-//     module.hot.accept();
-// }

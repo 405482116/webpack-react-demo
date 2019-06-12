@@ -5,6 +5,7 @@
     ], //从左向右解析
     "plugins": [
         // "@babel/plugin-transform-runtime"
-        "react-hot-loader/babel"
+        "react-hot-loader/babel",
+        "@babel/plugin-proposal-class-properties"
     ]
 }

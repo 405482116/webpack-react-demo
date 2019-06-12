@@ -7,7 +7,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin"); // version > 3.0
 module.exports = {
     mode: 'development',
     //webpack-Hot-middleware webpack-dev-middleware 实现刷新浏览器webpack-hot-middleware/client?noInfo=true&reload=true 是必填的
-    entry: ['webpack-hot-middleware/client?noInfo=true&reload=true', path.join(__dirname, 'src', 'main')],
+    entry: ['webpack-hot-middleware/client?noInfo=true&reload=true', path.join(__dirname, 'src/todo-demo/', 'index')],
     // watch: true,
     output: {
         path: __dirname + '/dist',
@@ -56,4 +56,19 @@ module.exports = {
             // hash: true, //会在打包好的bundle.js后面加上hash串
         }),
     ],
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                React: {
+                    name: 'React',
+                    test: /(react|react-dom)/,
+                    chunks: 'initial',
+                    priority: 80,
+                },
+                chunks: 'initial',
+                minSize: '30000',
+                maxAsyncRequests: '5',
+            },
+        }
+    },
 };
